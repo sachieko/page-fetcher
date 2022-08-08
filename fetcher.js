@@ -12,7 +12,7 @@ request(HOST, (error, response, body) => {
   fs.open(FILEPATH, 'wx', (err, fd) => {
     if (err) {
       if (err.code === 'EEXIST') {
-        console.error(chalk.red('myfile already exists'));
+        console.error(chalk.red(`${FILEPATH} already exists`));
         return;
       }
   
